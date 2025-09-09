@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Notion Clipper</h1>
+      <div id="auth-status" class="auth-status"></div>
+    </header>
+    
+    <div id="auth-section" class="auth-section hidden">
+      <button id="sign-in-btn" class="btn btn-primary">Sign in with Notion</button>
+    </div>
+    
+    <div id="main-section" class="main-section hidden">
+      <div class="form-group">
+        <label for="database-select">Database:</label>
+        <select id="database-select" class="form-control">
+          <option value="">Loading databases...</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="tags-input">Tags (comma-separated):</label>
+        <input type="text" id="tags-input" class="form-control" placeholder="work, important, research">
+      </div>
+      
+      <div class="form-group">
+        <label>Save mode:</label>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="save-mode" value="full" checked>
+            <span>Full Page</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="save-mode" value="selection">
+            <span>Selection Only</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="generate-summary">
+          <span>Generate Summary (AI)</span>
+        </label>
+      </div>
+      
+      <button id="save-btn" class="btn btn-primary">Save to Notion</button>
+      
+      <div id="status-message" class="status-message"></div>
+      
+      <div class="footer">
+        <button id="logout-btn" class="btn-link">Sign out</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Better Notion Web Clipper",
+  "version": "1.0.0",
+  "description": "Save web pages and highlights to Notion with AI summaries",
+  "permissions": [
+    "identity",
+    "storage",
+    "contextMenus",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://api.notion.com/*"
+  ],
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "homepage_url": "https://github.com/yourusername/notion-clipper"
+}
